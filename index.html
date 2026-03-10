@@ -2,221 +2,435 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SSK Realty – Trusted real estate experts in Tirunelveli. Buy, sell & invest in houses, plots, and agricultural land with complete legal transparency.">
+    <meta property="og:title" content="SSK Realty | Trusted Real Estate in Tirunelveli">
+    <meta property="og:description" content="Buy, Sell & Invest with Legal Transparency">
+    <meta property="og:image" content="img/ssk_logo.png">
     <link rel="icon" href="img/ico.ico" type="image/png">
     <title>SSK Realty | Trusted Real Estate in Tirunelveli</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="img/slide.1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<!-- Header -->
+<header id="header">
     <div class="logo">
-    <img src="img/ssk_logo.png" alt="SSK Realty">
-    <span>SSK Realty</span>
-</div>
-    <nav>
+        <img src="img/ssk_logo.png" alt="SSK Realty Logo">
+        <span>SSK Realty</span>
+    </div>
+    <nav aria-label="Main navigation" id="nav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home"         class="nav-link">Home</a></li>
+            <li><a href="#about"        class="nav-link">About</a></li>
+            <li><a href="#services"     class="nav-link">Services</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact"      class="nav-link">Contact</a></li>
         </ul>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
-<!-- Hero Slider -->
-<section class="slider" style="margin-bottom:0; padding-bottom:0;">
+<!-- ═══ HERO SLIDER ═══════════════════════════════════ -->
+<section class="slider" id="home" aria-label="Hero">
     <div class="slides">
-
         <div class="slide active">
-            <img src="img/slide.1.png">
-            <div class="content">
-                <h1>Trusted Real Estate Experts in Tirunelveli</h1>
-                <p>Buy, Sell & Invest with Legal Transparency</p>
-                <a href="#" class="btn">View Properties</a>
+            <img src="img/slide.1.png" alt="Trusted Real Estate Experts in Tirunelveli" loading="eager">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="slide-eyebrow">Tirunelveli's Trusted Experts</p>
+                <h1>Real Estate<br><em>You Can Trust</em></h1>
+                <p class="slide-sub">Buy, Sell &amp; Invest with Legal Transparency</p>
+                <a href="#about" class="btn-primary">View Properties</a>
             </div>
         </div>
-
         <div class="slide">
-            <img src="img/slide2.jpg">
-            <div class="content">
-                <h1>Agricultural Lands with Clear Documentation</h1>
-                <p>Verified Properties Only</p>
-                <a href="#" class="btn">Contact Now</a>
+            <img src="img/slide2.jpg" alt="Agricultural Lands" loading="lazy">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="slide-eyebrow">Verified Land Holdings</p>
+                <h1>Agricultural Lands<br><em>Clearly Documented</em></h1>
+                <p class="slide-sub">Legally Verified · Water Source Assessed · Soil Tested</p>
+                <a href="#about" class="btn-primary">Explore Lands</a>
             </div>
         </div>
-
         <div class="slide">
-            <img src="img/image.png">
-            <div class="content">
-                <h1>Your Dream Home Starts Here</h1>
-                <p>Independent Houses & Villas</p>
-                <a href="#" class="btn">View Properties</a>
+            <img src="img/image.png" alt="Your Dream Home" loading="lazy">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="slide-eyebrow">Residential Properties</p>
+                <h1>Your Dream Home<br><em>Starts Here</em></h1>
+                <p class="slide-sub">Independent Houses &amp; Villas Across Tirunelveli</p>
+                <a href="#about" class="btn-primary">Browse Homes</a>
             </div>
         </div>
-
         <div class="slide">
-            <img src="img/slide4.jpeg">
-            <div class="content">
-                <h1>Complete Legal & Registration Assistance</h1>
-                <p>Secure Every Transaction</p>
-                <a href="#" class="btn">Contact Now</a>
+            <img src="img/slide4.jpeg" alt="Legal Assistance" loading="lazy">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="slide-eyebrow">End-to-End Legal Support</p>
+                <h1>Every Transaction<br><em>Fully Secured</em></h1>
+                <p class="slide-sub">Registration · Patta Transfer · Encumbrance Certificates</p>
+                <a href="#contact" class="btn-primary">Get Support</a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-nav">
+        <button class="prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="dots" role="tablist" aria-label="Slide indicators"></div>
+        <button class="next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- ═══ STATS BAR ════════════════════════════════════ -->
+<div class="stats-bar">
+    <div class="stat-item" data-count="500" data-suffix="+">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Properties Sold</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="15" data-suffix="">
+        <span class="stat-num">15</span>
+        <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="1000" data-suffix="+">
+        <span class="stat-num">1000+</span>
+        <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="100" data-suffix="%">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Legal Transparency</span>
+    </div>
+</div>
+
+<!-- ═══ ABOUT ════════════════════════════════════════ -->
+<section class="about-section" id="about">
+
+    <!-- Intro split: image left, story right -->
+    <div class="about-intro reveal">
+        <div class="about-img-block">
+            <img src="img/logo.png" alt="SSK Realty" loading="lazy" class="about-main-img">
+            <div class="about-badge">
+                <span class="badge-num">15+</span>
+                <span class="badge-text">Years of<br>Trusted Service</span>
+            </div>
+        </div>
+        <div class="about-story">
+            <span class="eyebrow">Who We Are</span>
+            <h2>Tirunelveli's Most Trusted<br>Real Estate Partner</h2>
+            <div class="rule left"></div>
+            <p class="about-lead">For over 15 years, SSK Realty has been the cornerstone of real estate in Tirunelveli — guiding families, investors, and farmers to the right property with complete legal transparency.</p>
+            <p>We believe every property transaction deserves honesty, clear documentation, and expert guidance. From agricultural lands to residential villas, we handle every detail so you don't have to.</p>
+            <div class="about-pillars">
+                <div class="pillar">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <strong>Legal Clarity</strong>
+                        <span>Every deal is fully documented</span>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <i class="fa-solid fa-handshake-simple"></i>
+                    <div>
+                        <strong>Client First</strong>
+                        <span>Your interest, always protected</span>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                    <div>
+                        <strong>Local Expertise</strong>
+                        <span>Deep knowledge of Tirunelveli</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="btn-primary">Talk to an Expert</a>
+        </div>
+    </div>
+
+    <!-- 4 focus areas as cards -->
+    <div class="about-areas reveal">
+        <div class="area-card">
+            <div class="area-img">
+                <img src="img/agri.jpeg" alt="Agricultural Land" loading="lazy">
+                <div class="area-overlay"></div>
+            </div>
+            <div class="area-body">
+                <i class="fa-solid fa-seedling"></i>
+                <h4>Agricultural Lands</h4>
+                <p>Fertile farmland, coconut groves and investment plots — all legally verified with water and soil assessment.</p>
+                <a href="#contact" class="area-link">Enquire Now</a>
+            </div>
+        </div>
+        <div class="area-card">
+            <div class="area-img">
+                <img src="img/image.png" alt="Residential Properties" loading="lazy">
+                <div class="area-overlay"></div>
+            </div>
+            <div class="area-body">
+                <i class="fa-solid fa-house"></i>
+                <h4>Residential Properties</h4>
+                <p>Independent houses, villas and plots in Palayamkottai, Melapalayam and all prime areas.</p>
+                <a href="#contact" class="area-link">Enquire Now</a>
+            </div>
+        </div>
+        <div class="area-card">
+            <div class="area-img">
+                <img src="img/legal.jpeg" alt="Legal Support" loading="lazy">
+                <div class="area-overlay"></div>
+            </div>
+            <div class="area-body">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h4>Legal Support</h4>
+                <p>Patta transfer, EC verification, sale deed drafting and full registration assistance under one roof.</p>
+                <a href="#contact" class="area-link">Enquire Now</a>
+            </div>
+        </div>
+        <div class="area-card">
+            <div class="area-img">
+                <img src="img/tirunelveli.jpeg" alt="Tirunelveli Locations" loading="lazy">
+                <div class="area-overlay"></div>
+            </div>
+            <div class="area-body">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h4>Tirunelveli Locations</h4>
+                <p>Exclusive coverage across Nanguneri, Tenkasi Road, and all surrounding growth corridors.</p>
+                <a href="#contact" class="area-link">Enquire Now</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ═══ SERVICES ════════════════════════════════════ -->
+<section class="services-section" id="services">
+    <div class="services-inner">
+
+        <!-- Left: heading + CTA -->
+        <div class="services-lead reveal">
+            <span class="eyebrow">What We Do</span>
+            <h2>Services Built<br>Around You</h2>
+            <div class="rule left"></div>
+            <p>From the first site visit to the final registration stamp — SSK Realty is with you at every step. Here is how we make your property journey seamless.</p>
+            <a href="#contact" class="btn-primary" style="margin-top:32px;">Book a Free Consultation</a>
+        </div>
+
+        <!-- Right: service items list -->
+        <div class="services-list">
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="svc-content">
+                    <h4>Agricultural Land Sales</h4>
+                    <p>Verified farmland, coconut groves and investment lands with full legal clearance and soil assessment reports.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-house"></i></div>
+                <div class="svc-content">
+                    <h4>Residential Properties</h4>
+                    <p>Independent houses, villas and residential plots in Tirunelveli's most sought-after neighbourhoods.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-file-contract"></i></div>
+                <div class="svc-content">
+                    <h4>Legal Documentation</h4>
+                    <p>Comprehensive EC verification, ownership tracing and sale deed drafting handled by our legal team.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-file-signature"></i></div>
+                <div class="svc-content">
+                    <h4>Patta Transfer Assistance</h4>
+                    <p>End-to-end support for Patta and revenue record updates post-purchase — no hassle, no delays.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="svc-content">
+                    <h4>Site Visit Coordination</h4>
+                    <p>Expert-guided property visits scheduled at your convenience, with complete on-ground walkthroughs.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="svc-content">
+                    <h4>Property Valuation</h4>
+                    <p>Accurate, market-aligned valuations that help you buy smart, sell right, and invest confidently.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="svc-content">
+                    <h4>Tirunelveli Listings</h4>
+                    <p>Exclusive inventory across Palayamkottai, Melapalayam, Nanguneri and Tenkasi growth zones.</p>
+                </div>
+            </div>
+            <div class="svc-item reveal">
+                <div class="svc-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="svc-content">
+                    <h4>Buyer–Seller Liaison</h4>
+                    <p>We negotiate and mediate between parties to ensure smooth, fair, and conflict-free closings.</p>
+                </div>
             </div>
         </div>
 
     </div>
-
-    <div class="arrows">
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-    </div>
-
-    <div class="dots"></div>
 </section>
 
-<!-- About Section -->
-
-
- 
-<section class="info-section">
-    
-        <div style="width:100%; display:flex; justify-content:center; margin:60px 0;">
-    <h2 style="
-    font-size:40px;
-    color:#0f1b2e;
-    text-align:center;
-    margin:0;
-    padding:0px 0 0px 0;
-">
-        About Us
-    </h2>
-</div>
-
-
-    <!-- 1 Real Estate -->
-    <div class="info-container">
-        <div class="info-image">
-            <img src="img/logo.png" 
-     alt="logo" 
-     style="width:70%; height:500px; object-fit:cover;">
-        </div>
-        <div class="info-text">
-            <h2>Premium Real Estate Services</h2>
-            <p>SSK Realty offers trusted buying and selling solutions for houses, villas, and plots across Tirunelveli. We ensure clear titles, verified ownership, and complete transparency in every transaction.</p>
-            <a href="#" class="btn">Explore More</a>
-        </div>
+<!-- ═══ TESTIMONIALS ════════════════════════════════ -->
+<section class="testimonials-section" id="testimonials">
+    <div class="section-heading reveal">
+        <span class="eyebrow">Client Stories</span>
+        <h2>What Our Customers Say</h2>
+        <div class="rule"></div>
+        <p class="section-sub">Real words from real people who found their perfect property with SSK Realty</p>
     </div>
 
-    <!-- 2 Agriculture -->
-    <div class="info-container reverse">
-        <div class="info-image">
-            <img src="img/agri.jpeg" 
-     alt="Agricultural Land" 
-     style="width:70%; height:500px; object-fit:cover;">
-        </div>
-        <div class="info-text">
-            <h2>Agricultural Land Expertise</h2>
-            <p>From fertile farmland to coconut groves and investment lands, we guide clients in purchasing legally verified agricultural properties with proper water source and soil assessment.</p>
-            <a href="#" class="btn">View Lands</a>
-        </div>
-    </div>
+    <div class="testi-track-wrap reveal">
+        <div class="testi-track" id="testiTrack">
 
-    <!-- 3 Legal Formality -->
-    <div class="info-container">
-        <div class="info-image">
-             <img src="img/legal.jpeg" 
-     alt="Legal Assistance" 
-     style="width:70%; height:500px; object-fit:cover;">
-        </div>
-        <div class="info-text">
-            <h2>Complete Legal Formalities</h2>
-            <p>We provide assistance with Patta transfer, Encumbrance Certificate verification, Sale Deed drafting, Registration support, and complete legal documentation guidance.</p>
-            <a href="#" class="btn">Legal Support</a>
-        </div>
-    </div>
+            <div class="testi-card">
+                <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"SSK Realty made buying our first home completely stress-free. Every document was in order, and Mr. Senthil guided us through each step with patience and clarity. We couldn't have asked for better."</p>
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">RK</div>
+                    <div>
+                        <strong>Rajkumar &amp; Meena</strong>
+                        <span>Home Buyers, Palayamkottai</span>
+                    </div>
+                </div>
+            </div>
 
-    <!-- 4 Tirunelveli Properties -->
-    <div class="info-container reverse">
-        <div class="info-image">
-             <img src="img/tirunelveli.jpeg" 
-     alt="Properties in Tirunelveli" 
-     style="width:70%; height:500px; object-fit:cover;">
-        </div>
-        <div class="info-text">
-            <h2>Properties in Tirunelveli</h2>
-            <p>Explore premium residential and investment properties in key locations including Palayamkottai, Melapalayam, Nanguneri, and Tenkasi Road areas.</p>
-            <a href="#" class="btn">Browse Properties</a>
-        </div>
-    </div>
+            <div class="testi-card">
+                <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"I purchased agricultural land through SSK Realty and was impressed by how thoroughly they verified the title and soil condition. The Patta transfer was handled swiftly. Truly a one-stop solution."</p>
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">SM</div>
+                    <div>
+                        <strong>Suresh Murugan</strong>
+                        <span>Farmer & Investor, Nanguneri</span>
+                    </div>
+                </div>
+            </div>
 
-</section>
+            <div class="testi-card">
+                <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"What I appreciated most was their honesty. No hidden costs, no pressure — just straightforward advice. We sold our old property and bought a new villa, all through SSK Realty within three months."</p>
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">VP</div>
+                    <div>
+                        <strong>Vijayalakshmi P.</strong>
+                        <span>Property Seller & Buyer, Melapalayam</span>
+                    </div>
+                </div>
+            </div>
 
+            <div class="testi-card">
+                <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"As an NRI investing from abroad, I was worried about managing land purchase from a distance. SSK Realty coordinated every site visit, legal check and registration on my behalf. Absolutely reliable."</p>
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">AK</div>
+                    <div>
+                        <strong>Arun Kumar</strong>
+                        <span>NRI Investor, Tenkasi Road Area</span>
+                    </div>
+                </div>
+            </div>
 
+            <div class="testi-card">
+                <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                <p>"The team at SSK Realty helped us find a plot within our exact budget in a location we loved. They negotiated well on our behalf and the EC verification gave us complete peace of mind. Highly recommend!"</p>
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">PT</div>
+                    <div>
+                        <strong>Priya &amp; Thilak</strong>
+                        <span>Plot Buyers, Tirunelveli Town</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- Services -->
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-container">
-        <div class="card">
-            <i class="fa-solid fa-seedling"></i>
-            <h3>Agricultural Land Sales</h3>
         </div>
-        <div class="card">
-            <i class="fa-solid fa-house"></i>
-            <h3>Residential Properties</h3>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-file-contract"></i>
-            <h3>Legal Documentation</h3>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <h3>Registration & Patta Transfer</h3>
-        </div>
-        <div class="card">
-    <i class="fa-solid fa-file-signature"></i>
-    <h3>Patta Transfer Assistance</h3>
-</div>
-<div class="card">
-    <i class="fa-solid fa-location-dot"></i>
-    <h3>Site Visit Coordination</h3>
-</div>
-<div class="card">
-    <i class="fa-solid fa-map-location-dot"></i>
-    <h3>Properties in Tirunelveli</h3>
-</div>
-<div class="card">
-    <i class="fa-solid fa-chart-line"></i>
-    <h3>Property Valuation</h3>
-</div>
+
+        <!-- nav dots -->
+        <div class="testi-dots" id="testiDots"></div>
     </div>
 </section>
 
-<!-- Contact CTA -->
-<section class="contact-cta">
-    <h2>Schedule a Site Visit Today</h2>
-    <a href="#" class="btn">Call Now</a>
-    <a href="#" class="btn whatsapp">WhatsApp</a>
+<!-- ═══ CTA ══════════════════════════════════════════ -->
+<section class="contact-cta" id="contact">
+    <div class="cta-inner reveal">
+        <span class="eyebrow light">Get In Touch</span>
+        <h2>Schedule a Site Visit Today</h2>
+        <p>Our experts are ready to guide you. Reach out for a free consultation.</p>
+        <div class="cta-actions">
+            <a href="tel:+91XXXXXXXXXX" class="btn-primary">
+                <i class="fa-solid fa-phone"></i>&nbsp; Call Now
+            </a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn-whatsapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>&nbsp; WhatsApp
+            </a>
+        </div>
+    </div>
 </section>
 
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
 <footer>
-    <div class="footer-content">
-        <div>
-            <h3>SSK Realty</h3>
-            <p>Tirunelveli, Tamil Nadu</p>
-            <p>Phone: +91 XXXXX XXXXX</p>
-            <p>Email: info@sskrealty.com</p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="img/ssk_logo.png" alt="SSK Realty">
+                <span>SSK Realty</span>
+            </div>
+            <p>Your most trusted real estate partner in Tirunelveli. Clarity, legality, transparency — in every deal.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </div>
-        <div>
+        <div class="footer-links">
             <h4>Quick Links</h4>
-            <p>Home</p>
-            <p>About</p>
-            <p>Services</p>
-            <p>Contact</p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Tirunelveli, Tamil Nadu</p>
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@sskrealty.com">info@sskrealty.com</a></p>
         </div>
     </div>
-    <p class="copyright">© 2026 SSK Realty. All Rights Reserved.</p>
+    <div class="footer-bottom">
+        <p>© 2026 SSK Realty. All Rights Reserved.</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
